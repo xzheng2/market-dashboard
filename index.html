@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>市场仪表盘 | Market Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>市场仪表盘</h1>
+        <div class="header-right">
+            <span class="last-update" id="lastUpdate">加载中...</span>
+            <button class="refresh-btn" id="refreshBtn" title="刷新数据">&#x21bb;</button>
+        </div>
+    </header>
+
+    <main>
+        <!-- 加密货币板块 -->
+        <section class="section">
+            <h2 class="section-title">加密货币</h2>
+            <div class="cards-grid">
+                <div class="card" id="card-btc">
+                    <div class="card-header">
+                        <span class="card-icon">&#x20BF;</span>
+                        <span class="card-label">比特币 BTC</span>
+                    </div>
+                    <div class="card-value" id="btcPrice">--</div>
+                    <div class="card-change" id="btcChange">--</div>
+                </div>
+                <div class="card" id="card-crypto-fg">
+                    <div class="card-header">
+                        <span class="card-icon">&#x1F4CA;</span>
+                        <span class="card-label">加密恐慌贪婪指数</span>
+                    </div>
+                    <div class="card-value" id="cryptoFgValue">--</div>
+                    <div class="card-change" id="cryptoFgLabel">--</div>
+                    <div class="fg-bar-container">
+                        <div class="fg-bar" id="cryptoFgBar"></div>
+                    </div>
+                </div>
+                <div class="card" id="card-funding">
+                    <div class="card-header">
+                        <span class="card-icon">&#x26A1;</span>
+                        <span class="card-label">BTC 实时溢价率</span>
+                    </div>
+                    <div class="card-value" id="fundingValue">--</div>
+                    <div class="card-change" id="fundingInfo">--</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 美股板块 -->
+        <section class="section">
+            <h2 class="section-title">美股</h2>
+            <div class="cards-grid">
+                <div class="card" id="card-nasdaq">
+                    <div class="card-header">
+                        <span class="card-icon">&#x1F4C8;</span>
+                        <span class="card-label">纳斯达克 NASDAQ</span>
+                    </div>
+                    <div class="card-value" id="nasdaqPrice">--</div>
+                    <div class="card-change" id="nasdaqChange">--</div>
+                </div>
+                <div class="card" id="card-sp500">
+                    <div class="card-header">
+                        <span class="card-icon">&#x1F4C8;</span>
+                        <span class="card-label">标普500 S&P 500</span>
+                    </div>
+                    <div class="card-value" id="sp500Price">--</div>
+                    <div class="card-change" id="sp500Change">--</div>
+                </div>
+                <div class="card" id="card-stock-fg">
+                    <div class="card-header">
+                        <span class="card-icon">&#x1F4CA;</span>
+                        <span class="card-label">美股恐慌贪婪指数</span>
+                    </div>
+                    <div class="card-value" id="stockFgValue">--</div>
+                    <div class="card-change" id="stockFgLabel">--</div>
+                    <div class="fg-bar-container">
+                        <div class="fg-bar" id="stockFgBar"></div>
+                    </div>
+                </div>
+                <div class="card" id="card-dxy">
+                    <div class="card-header">
+                        <span class="card-icon">&#x1F4B5;</span>
+                        <span class="card-label">美元指数 DXY</span>
+                    </div>
+                    <div class="card-value" id="dxyPrice">--</div>
+                    <div class="card-change" id="dxyChange">--</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 可扩展区域 -->
+        <section class="section section-placeholder">
+            <h2 class="section-title">更多指标</h2>
+            <div class="placeholder-content">
+                <p>即将推出...</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>数据来源: CoinGecko, Alternative.me, Binance, Yahoo Finance, CNN | 仅供参考，不构成投资建议</p>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
